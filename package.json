@@ -1,0 +1,16 @@
+{
+  "name": "m4w3-postman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx json-server --watch db.json & npx newman run Alunos.postman_collection.json "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "newman": "^6.0.0"
+  }
+}

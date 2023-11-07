@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "fb863d80-022a-4aad-b145-d8cad540abc8",
+		"name": "Alunos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2178209",
+		"_collection_link": "https://galactic-capsule-786771.postman.co/workspace/QA0523A~66307ab5-f3b1-415a-94fb-c9c04248498c/collection/2178209-fb863d80-022a-4aad-b145-d8cad540abc8?action=share&creator=2178209&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Obter todos os alunos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/alunos?_sort=curso&_order=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alunos"
+					],
+					"query": [
+						{
+							"key": "_sort",
+							"value": "curso"
+						},
+						{
+							"key": "_order",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
